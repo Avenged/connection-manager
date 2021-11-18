@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="ConnectionManager.Views.EnvironmentDetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ConnectionManager.Views"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:ui="using:Microsoft.Toolkit.Uwp.UI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="12">
+        <StackPanel>
+            <controls:WrapPanel>
+                <TextBlock
+                    Name="TitleGuidTextBlock"
+                    Margin="10,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Style="{ThemeResource BodyTextStyle}"
+                    Text="Guid:" />
+                <TextBlock
+                    Name="GuidTextBlock"
+                    Margin="10,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontWeight="Bold"
+                    Style="{ThemeResource BodyTextStyle}"
+                    Text="{x:Bind ViewModel.Environment.Guid}" />
+            </controls:WrapPanel>
+            <controls:WrapPanel>
+                <TextBlock
+                    Name="TitleNameTextBlock"
+                    Margin="10,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Style="{ThemeResource BodyTextStyle}"
+                    Text="Name:" />
+                <TextBlock
+                    Name="NameTextBlock"
+                    Margin="10,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontWeight="Bold"
+                    Style="{ThemeResource BodyTextStyle}"
+                    Text="{x:Bind ViewModel.Environment.Name}" />
+            </controls:WrapPanel>
+            <controls:WrapPanel>
+                <TextBlock
+                    Name="TitleDescriptionTextBlock"
+                    Margin="10,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Style="{ThemeResource BodyTextStyle}"
+                    Text="Description:" />
+                <TextBlock
+                    Name="DescriptionTextBlock"
+                    Margin="10,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontWeight="Bold"
+                    Style="{ThemeResource BodyTextStyle}"
+                    Text="{x:Bind ViewModel.Environment.Description}" />
+            </controls:WrapPanel>
+            <controls:WrapPanel Orientation="Vertical">
+                <TextBlock
+                    Name="TitleDataTextBlock"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="10,0,0,0"
+                    Style="{ThemeResource BodyTextStyle}"
+                    Text="ConnectionStrings:" />
+                <RichEditBox
+                    x:Name="ConnStrsRichEditBox"
+                    TextWrapping="NoWrap"
+                    Padding="5,10,5,20"
+                    Margin="10,0,0,0"
+                    Width="450" />
+            </controls:WrapPanel>
+        </StackPanel>
+    </Grid>
+</Page>
