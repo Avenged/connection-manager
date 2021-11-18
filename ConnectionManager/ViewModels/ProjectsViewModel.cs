@@ -23,8 +23,8 @@ namespace ConnectionManager.ViewModels
         private ICommand _projectClickCommand;
         private ICommand _createClickCommand;
 
-        public ICommand ProjectClickCommand => _projectClickCommand ?? (_projectClickCommand = new RelayCommand<Project>(OnItemClick));
-        public ICommand CreateClickCommand => _createClickCommand ?? (_createClickCommand = new RelayCommand(OnCreateClick));
+        public ICommand ProjectClickCommand => _projectClickCommand ??= new RelayCommand<Project>(OnItemClick);
+        public ICommand CreateClickCommand => _createClickCommand ??= new RelayCommand(OnCreateClick);
 
         public ObservableCollection<Project> Source { get; } = new ObservableCollection<Project>();
 

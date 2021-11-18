@@ -6,6 +6,7 @@
     xmlns:helper="using:ConnectionManager.Helpers"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Style="{StaticResource PageStyle}"
+    xmlns:ui="using:Microsoft.Toolkit.Uwp.UI"
     xmlns:xaml="using:Windows.UI.Xaml"
     mc:Ignorable="d">
     <Page.Resources>
@@ -63,6 +64,33 @@
                     Style="{ThemeResource BodyTextBlockStyle}" />
 
                 <HyperlinkButton x:Uid="Settings_PrivacyTermsLink" Margin="{StaticResource XSmallTopMargin}" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock
+                    Text="Configuration"
+                    Margin="0,0,0,10"
+                    Style="{ThemeResource TitleTextBlockStyle}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button
+                    Name="BtnExport"
+                    Command="{x:Bind ViewModel.ExportConfigurationClickCommand}"
+                    BorderThickness="1"
+                    ui:FrameworkElementExtensions.Cursor="Hand"
+                    CornerRadius="15"
+                    Content="Export"
+                    Width="120"
+                    Margin="0,0,10,0"
+                    VerticalAlignment="Center" />
+                <Button
+                    Name="BtnImport"
+                    Command="{x:Bind ViewModel.ImportConfigurationClickCommand}"
+                    BorderThickness="1"
+                    ui:FrameworkElementExtensions.Cursor="Hand"
+                    CornerRadius="15"
+                    Content="Import"
+                    Width="120"
+                    VerticalAlignment="Center" />
             </StackPanel>
         </StackPanel>
     </Grid>    
