@@ -205,46 +205,27 @@
     <Compile Include="Helpers\EnumToBooleanConverter.cs" />
     <Compile Include="Helpers\NavHelper.cs" />
     <Compile Include="Helpers\SettingsStorageExtensions.cs" />
-    <Compile Include="Models\TabViewItemData.cs" />
     <Compile Include="Services\ActivationService.cs" />
     <Compile Include="Activation\DefaultActivationHandler.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
     <Compile Include="Services\ViewLifetimeControl.cs" />
     <Compile Include="Services\WindowManagerService.cs" />
-    <Compile Include="ViewModels\BlankViewModel.cs" />
-    <Compile Include="ViewModels\ContentGridDetailViewModel.cs" />
-    <Compile Include="ViewModels\ContentGridViewModel.cs" />
     <Compile Include="ViewModels\CreateProjectViewModel.cs" />
     <Compile Include="ViewModels\EditEnvironmentViewModel.cs" />
     <Compile Include="ViewModels\CreateEnvironmentViewModel.cs" />
-    <Compile Include="ViewModels\DataGridViewModel.cs" />
     <Compile Include="ViewModels\EditProjectViewModel.cs" />
     <Compile Include="ViewModels\EnvironmentDetailsViewModel.cs" />
-    <Compile Include="ViewModels\ListDetailsViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ProjectDetailsViewModel.cs" />
     <Compile Include="ViewModels\ProjectsViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
-    <Compile Include="ViewModels\TabViewViewModel.cs" />
-    <Compile Include="Views\BlankPage.xaml.cs">
-      <DependentUpon>BlankPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ContentGridDetailPage.xaml.cs">
-      <DependentUpon>ContentGridDetailPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ContentGridPage.xaml.cs">
-      <DependentUpon>ContentGridPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\CreateEnvironmentPage.xaml.cs">
       <DependentUpon>CreateEnvironmentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CreateProjectPage.xaml.cs">
       <DependentUpon>CreateProjectPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DataGridPage.xaml.cs">
-      <DependentUpon>DataGridPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EditEnvironmentPage.xaml.cs">
       <DependentUpon>EditEnvironmentPage.xaml</DependentUpon>
@@ -254,12 +235,6 @@
     </Compile>
     <Compile Include="Views\EnvironmentDetailsPage.xaml.cs">
       <DependentUpon>EnvironmentDetailsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListDetailsDetailControl.xaml.cs">
-      <DependentUpon>ListDetailsDetailControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListDetailsPage.xaml.cs">
-      <DependentUpon>ListDetailsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -275,9 +250,6 @@
     </Compile>
     <Compile Include="Views\ShellPage.xaml.cs">
       <DependentUpon>ShellPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TabViewPage.xaml.cs">
-      <DependentUpon>TabViewPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -311,18 +283,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\BlankPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\ContentGridDetailPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\ContentGridPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\CreateEnvironmentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -330,10 +290,6 @@
     <Page Include="Views\CreateProjectPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\DataGridPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\EditEnvironmentPage.xaml">
       <SubType>Designer</SubType>
@@ -346,14 +302,6 @@
     <Page Include="Views\EnvironmentDetailsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ListDetailsDetailControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\ListDetailsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -372,10 +320,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ShellPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\TabViewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -421,6 +365,9 @@
     <SDKReference Include="WindowsDesktop, Version=10.0.19041.0">
       <Name>Windows Desktop Extensions for the UWP</Name>
     </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
